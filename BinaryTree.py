@@ -20,12 +20,34 @@ class BinaryTree:
         return val
 
 
-tree = BinaryTree(1000)
-tree.root.left = Node(100)
-tree.root.right = Node(200)
-tree.root.left.right = Node(50)
-tree.root.left.left = Node(50)
-tree.root.right.right = Node(250)
-tree.root.right.left = Node(250)
+tree = BinaryTree(1)
+tree.root.left = Node(2)
+tree.root.right = Node(3)
+tree.root.left.right = Node(5)
+tree.root.left.left = Node(4)
+tree.root.right.right = Node(6)
+tree.root.left.left.left = Node(7)
+tree.root.right.right.right = Node(8)
 
 print(tree.print_tree())
+
+
+def deepestLeavesSum(root):
+    """
+        :type root: TreeNode
+        :rtype: int
+        """
+
+    def count(node, target, c1, c2):
+        if node:
+            if node.value == target:
+                return c1, c2
+            if node.left:
+                count(node.left, target, c1 + 1, 0)
+            if node.right:
+                count(node.right, target, 0, c2 + 1)
+
+    return count(root, 5, 0, 0)
+
+
+print(deepestLeavesSum(tree.root))

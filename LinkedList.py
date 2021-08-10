@@ -156,26 +156,3 @@ print("Length is", linked_list.len())
 
 linked_list.display()
 
-linked_list.delete(12)
-
-linked_list.delete_by_index(5)
-
-linked_list.get(3)
-
-print("Element at 6th index is", linked_list[6])
-
-linked_list.insert(5, 100)
-
-linked_list.set(0, 999)
-
-print("Length is", linked_list.len())
-
-linked_list.display()
-
-linked_list.reverse()
-
-linked_list.display()
-
-print(linked_list[5])
-
-linked_list.display()
