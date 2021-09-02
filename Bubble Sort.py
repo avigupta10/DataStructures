@@ -6,4 +6,4 @@ def bubbleSort(arr: list):
     return arr
 
 
-print(bubbleSort([1, 5, 3, 7, 6, 8, 2, 4,0]))
+print(bubbleSort([1, 5, 3, 7, 6, 8, 2, 4]))
