@@ -9,7 +9,7 @@ def binarySearch(arr: list, key: int):
         elif arr[mid] > key:
             high = mid-1
         else:
-            return f'Element {arr[mid]} for at index {mid}'
+            return f'Element {arr[mid]} at index {mid}'
     return -1
 
 
